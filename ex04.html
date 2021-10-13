@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function click1() {
+		var n = document.getElementById('name1').value
+		//<>태그들을 Element라고하는데 id가 name1인 태그의 값을 가져오겠다.
+		console.log(n)
+		document.getElementById('name1').value = ""
+		document.getElementById('name2').value = n //1에 적은 내용을 2에 띄움
+		var n3 = document.getElementById('name3')
+
+		//n3.innerHTML=msg //innerHTML n3 글부분에 메시지 추가
+
+		
+		var DBDate = [ '홍길동', '김개똥', '고도리' ]
+		var msg = "<table border ='1'>"
+		for (i = 0; i < DBDate.length; i++) {
+			msg += "<tr><th>" + DBDate[i] + "</th></tr>"
+		}
+		msg += "</table>"
+		n3.innerHTML = msg
+	}
+	var bool =true
+	function setImg(){
+		if(bool){
+			document.getElementById('img').src='dessert.png'
+		}else{
+			document.getElementById('img').src='dessert2.png'
+		}
+		bool = !bool
+	}
+</script>
+<style type="text/css">
+	#img{width: 100px;height: 100px;}
+</style>
+</head>
+<body>
+	<img id="img" src="logo.png">
+	<br><button type="button" onclick="setImg()">이미지</button>
+	<hr>
+	<input type="text" id="name1" placeholder="name1">
+	<br>
+	<input type="text" id="name2">
+	<br>
+	<div id="name3">안녕하세요</div>
+	<input type="button" value="버튼" onclick="click1()">
+	<br>
+</body>
+</html>

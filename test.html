@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.test02{display: none;}/*내용이 숨겨짐*/
+	.test01:hover+ .test02{display: block; transition:all 0.9s;}
+</style>
+</head>
+<body>
+	<div class="test01">목록</div>
+	<ul class="test02">
+		<li>111</li>
+		<li>222</li>
+		<li>111</li>
+	</ul>
+</body>
+</html>

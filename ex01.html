@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="test.js"></script>  <!-- 외부 js파일을 연결해준 부분-->
+<script type="text/javascript">
+	var num=1234;
+	document.write('num 출력 : '+num+"<hr>")
+	/*document는 현재 페이지라는 의미 -> 현재페이지에서 쓰겠다.*/
+	document.write('<span style="color:redl">num 출력</span>: '+num+"<hr>")
+	
+	var obj="aaa";
+	document.write(typeof 100.11+"<br>")
+	document.write(typeof num+"<br>")
+	document.write(typeof obj+"<br>")
+	document.write(typeof [1,2,3]+"<br>")
+	document.write(typeof "test"+"<br>")
+	
+	var comGrade = prompt('숫자입력')
+	document.write('입력숫자: '+comGrade)
+</script>
+</head>
+<body>
+	<button type="button" onclick="test()">버튼</button>
+</body>
+</html>

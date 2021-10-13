@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>quiz3</title>
+<script type="text/javascript">
+	var imgnum =1
+	function click1(){
+		console.log(imgnum)
+		--imgnum
+		if(imgnum<=0){
+			imgnum=8
+		}
+		document.getElementById('img').src='resources/images/최근상품0'+imgnum+'.jpg'
+		
+	}
+	function click2(){
+		console.log(imgnum)
+		++imgnum
+		if(imgnum>=9){
+			imgnum=1
+		}
+		document.getElementById('img').src='resources/images/최근상품0'+imgnum+'.jpg'
+		
+	}
+</script>
+<style type="text/css">
+	#img{width: 200px;height: 200px;}
+</style>
+</head>
+<body>
+	<img id="img" src="resources/images/최근상품01.jpg"><br>
+	<button type="button" onclick="click1()">이전 이미지</button>
+	<button type="button" onclick="click2()">다음 이미지</button>
+</body>
+</html>
